@@ -87,9 +87,9 @@ jobs:
 
     - name: Generate Variables
       run: |
-        cd $OPENWRT_PATH
-        make defconfig > /dev/null 2>&1
+        cd openwrt
         cat feeds.conf.default
+        make defconfig > /dev/null 2>&1
         SOURCE_REPO="$(echo $REPO_URL | awk -F '/' '{print $(NF)}')"
         echo "SOURCE_REPO=$SOURCE_REPO" >> $GITHUB_ENV
         DEVICE_TARGET=$(cat .config | grep CONFIG_TARGET_BOARD | awk -F '"' '{print $2}')
@@ -107,7 +107,7 @@ jobs:
 
     - name: Install Feeds
       run: |
-        cd $OPENWRT_PATH
+        cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
@@ -121,8 +121,8 @@ jobs:
   
     - name: Download DL Package
       run: |
-        cd $OPENWRT_PATH
-        cat 
+        cd openwrt
+        cat feeds.conf.default
         make defconfig
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
@@ -134,7 +134,7 @@ jobs:
     - name: Compile Firmware
       id: compile
       run: |
-        cd $OPENWRT_PATH
+        cd openwrt
         echo -e "$(($(nproc) + 2)) thread compile"
         make -j$(($(nproc) + 2)) || make -j1 || make -j1 V=s
         echo "status=success"  >> $GITHUB_ENV

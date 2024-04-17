@@ -6,7 +6,7 @@ on:
     - cron: 0 19 * * *
 
 env:
-  REPO_URL: https://github.com/breeze303/openwrt-ipq60xx.git
+  REPO_URL: https://github.com/breeze303/ipq60xx-6.6.git
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ax1800.config
@@ -153,13 +153,15 @@ jobs:
     - name: Organize Files
       if: steps.compile.outputs.status == 'success'
       run: |
+        mkdir -p $OPENWRT_PATH/allpackages
+        cp -a $OPENWRT_PATH/bin/* allpackages
+        tar -zcvf allpackages.tar.gz allpackages
+        mv -f allpackages.tar.gz $OPENWRT_PATH/bin/targets/*/*
         cd $OPENWRT_PATH/bin/targets/*/*
         cat sha256sums
         cp $OPENWRT_PATH/.config build.config
         # mv -f $OPENWRT_PATH/bin/packages/*/*/*.ipk packages
-        cp -a $OPENWRT_PATH/bin/* packages
-        tar -zcvf Packages.tar.gz packages
-        # tar -zcvf Packages.tar.gz $OPENWRT_PATH/bin/*
+        # tar -zcvf Packages.tar.gz packages
         rm -rf packages feeds.buildinfo version.buildinfo
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
 

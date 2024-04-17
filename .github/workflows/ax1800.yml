@@ -157,14 +157,15 @@ jobs:
         mkdir -p allpackages
         cp -a $OPENWRT_PATH/bin/* allpackages
         tar -zcvf allpackages.tar.gz allpackages
+        ls -al && rm -rf allpackages
         mv -f allpackages.tar.gz $OPENWRT_PATH/bin/targets/*/*
-        rm -rf allpackages
         cd $OPENWRT_PATH/bin/targets/*/*
         cat sha256sums
         cp $OPENWRT_PATH/.config build.config
         # mv -f $OPENWRT_PATH/bin/packages/*/*/*.ipk packages
         # tar -zcvf Packages.tar.gz packages
         # rm -rf packages feeds.buildinfo version.buildinfo
+        ls -al && rm -rf packages
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
 
     - name: Upload Firmware To Artifact

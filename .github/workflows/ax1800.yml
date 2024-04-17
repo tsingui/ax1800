@@ -16,7 +16,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: IPQ60XX-6.6-WIFI(EMMC)
+  FIRMWARE_TAG: IPQ60XX-6.6-WIFI
   TZ: Asia/Shanghai
 
 jobs:
@@ -178,10 +178,9 @@ jobs:
         token: ${{ secrets.GH_TOKEN }}
         artifacts: ${{ env.FIRMWARE_PATH }}/*
         body: |
-          **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 固件信息
-          - 这是带WIFI以及NSS且适用于EMMC的6.6内核固件
-          - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
+          - kernel-6.6.x 固件带WIFI以及NSS
+          - 💻 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🌐 默认地址: 10.0.0.1

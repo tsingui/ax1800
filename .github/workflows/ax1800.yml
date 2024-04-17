@@ -157,8 +157,9 @@ jobs:
         cat sha256sums
         cp $OPENWRT_PATH/.config build.config
         # mv -f $OPENWRT_PATH/bin/packages/*/*/*.ipk packages
-        # tar -zcvf Packages.tar.gz packages
-        tar -zcvf Packages.tar.gz $OPENWRT_PATH/bin/*
+        cp -a $OPENWRT_PATH/bin/* packages
+        tar -zcvf Packages.tar.gz packages
+        # tar -zcvf Packages.tar.gz $OPENWRT_PATH/bin/*
         rm -rf packages feeds.buildinfo version.buildinfo
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
 

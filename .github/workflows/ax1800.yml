@@ -158,7 +158,7 @@ jobs:
         cp -a $OPENWRT_PATH/bin/* allpackages
         tar -zcvf packages.tar.gz allpackages
         ls -al && rm -rf allpackages
-        mv -f allpackages.tar.gz $OPENWRT_PATH/bin/targets/*/*
+        mv -f packages.tar.gz $OPENWRT_PATH/bin/targets/*/*
         cd $OPENWRT_PATH/bin/targets/*/*
         cat sha256sums
         cp $OPENWRT_PATH/.config build.config

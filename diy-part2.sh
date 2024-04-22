@@ -50,6 +50,7 @@ sed -i 's/OpenWrt/Tomato/g' package/base-files/files/bin/config_generate
 # git clone --depth 1 https://github.com/messense/aliyundrive-fuse.git && mv aliyundrive-fuse/openwrt/* ./package && rm -rf aliyundrive-fuse
 # git clone --depth 1 https://github.com/messense/aliyundrive-webdav.git && mv aliyundrive-webdav/openwrt/* ./package && rm -rf aliyundrive-webdav
 # git clone https://github.com/kenzok8/small-package package/small-package
+# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # luci-theme-argon for openwrt
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon

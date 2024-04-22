@@ -26,7 +26,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/base-files/files/etc/openwrt_release
 echo "DISTRIB_SOURCECODE='OpenWrt'" >>package/base-files/files/etc/openwrt_release
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/emortal/default-settings/files/99-default-settings
-sed -i "s|DISTRIB_DESCRIPTION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/emortal/default-settings/files/99-default-settings
+sed -i "s|DISTRIB_DESCRIPTION='.*'|DISTRIB_REVISION='OpenWRT R$(date +%Y.%m.%d)'|g" package/emortal/default-settings/files/99-default-settings
 
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 10.0.0.1）
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate

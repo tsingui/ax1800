@@ -157,9 +157,9 @@ jobs:
         mkdir -p allpackages
         cp -a $OPENWRT_PATH/bin/* allpackages
         # tar -zcvf allpackages.tar.gz allpackages
-        tar -zcvf $(date +"%Y.%m.%d")-allpackages.tar.gz allpackages
+        tar -zcvf $(date +"%Y-%m-%d")-allpackages.tar.gz allpackages
         ls -al && rm -rf allpackages
-        mv -f allpackages.tar.gz $OPENWRT_PATH/bin/targets/*/*
+        mv -f $(date +"%Y-%m-%d")-allpackages.tar.gz $OPENWRT_PATH/bin/targets/*/*
         cd $OPENWRT_PATH/bin/targets/*/*
         cat sha256sums
         cp $OPENWRT_PATH/.config build.config

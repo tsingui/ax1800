@@ -18,7 +18,7 @@
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # Modify wifi default off to on
-sed -i 's/set wireless.${name}.disabled=1/set wireless.${name}.disabled=0/g' ./package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
+sed -i "/wireless.\${name}.disabled/d" package/kernel/mac80211/files/lib/wifi/mac80211.sh || sed -i "/wireless.\${name}.disabled/d" package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
 
 # Add autocore support for armvirt
 # sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile

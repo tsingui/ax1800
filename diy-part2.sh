@@ -63,6 +63,37 @@ sed -i 's/OpenWrt/Tomato/g' package/base-files/files/bin/config_generate
 # git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # 删除重复包
+rm -rf feeds/kiddin9/luci-app-alist
+rm -rf feeds/kiddin9/luci-app-bypass
+rm -rf feeds/kiddin9/luci-app-chinadns-ng
+rm -rf feeds/kiddin9/luci-app-clash
+rm -rf feeds/kiddin9/luci-app-mosdns
+rm -rf feeds/kiddin9/luci-app-passwall2
+rm -rf feeds/kiddin9/luci-app-shadowsocks-libev
+rm -rf feeds/kiddin9/luci-app-shadowsocks-rust
+rm -rf feeds/kiddin9/luci-app-ssr-libev-server
+rm -rf feeds/kiddin9/luci-app-ssr-mudb-server
+rm -rf feeds/kiddin9/luci-app-ssr-plus
+rm -rf feeds/kiddin9/luci-app-ssrserver-python
+rm -rf feeds/kiddin9/luci-app-v2ray-server
+rm -rf feeds/kiddin9/luci-app-v2raya
+rm -rf feeds/kiddin9/luci-app-dockerman
+rm -rf feeds/kiddin9/luci-app-ksmbd
+rm -rf feeds/kiddin9/luci-app-nlbwmon
+rm -rf feeds/kiddin9/luci-app-wrtbwmon
+rm -rf feeds/kiddin9/wrtbwmon
+rm -rf feeds/kiddin9/luci-app-rtbwmon
+rm -rf feeds/kiddin9/luci-app-upnp
+rm -rf feeds/kiddin9/luci-app-tencentcloud-cos
+rm -rf feeds/kiddin9/luci-app-tencentddns
+rm -rf feeds/kiddin9/luci-app-ddnsto
+rm -rf feeds/kiddin9/ddnsto
+rm -rf feeds/kiddin9/luci-app-linkease
+rm -rf feeds/kiddin9/linkease
+rm -rf feeds/kiddin9/automount
+rm -rf feeds/kiddin9/luci-app-LingTiGameAcc
+rm -rf feeds/kiddin9/LingTiGameAcc
+
 # rm -rf feeds/luci/themes/luci-theme-argon
 # rm -rf feeds/luci/applications/luci-app-argon-config
 # rm -rf feeds/luci/applications/luci-app-diskman

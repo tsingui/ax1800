@@ -26,8 +26,11 @@ sed -i "/wireless.\${name}.disabled/d" package/kernel/mac80211/files/lib/wifi/ma
 # Set DISTRIB_REVISION
 # sed -i "s/OpenWrt /OpenWrt Build $(TZ=UTC-8 date "+%Y-%m-%d") Compiled By TSingui /g" package/lean/default-settings/files/zzz-default-settings
 # Set etc/openwrt_release
-# sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(TZ=UTC-8 date +%Y-%m-%d) Compiled By TSingui'|g" package/base-files/files/etc/openwrt_release
-# echo "DISTRIB_SOURCECODE='OpenWrt'" >>package/base-files/files/etc/openwrt_release
+sed -i '/DISTRIB_REVISION/d' package/base-files/files/openwrt_release
+sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(TZ=UTC-8 date +%Y-%m-%d)'|g" package/base-files/files/etc/openwrt_release
+sed -i '/DISTRIB_DESCRIPTION/d' package/base-files/files/openwrt_release
+sed -i "s|DISTRIB_DESCRIPTION='.*'|DISTRIB_DESCRIPTION='OpenWRT R$(TZ=UTC-8 date +%Y-%m-%d) Compiled By TSingui'|g" package/emortal/default-settings/files/99-default-settings
+# echo "DISTRIB_SOURCECODE='OpenWrt'" >> package/base-files/files/etc/openwrt_release
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(TZ=UTC-8 date +%Y-%m-%d)'|g" package/emortal/default-settings/files/99-default-settings
 sed -i "s|DISTRIB_DESCRIPTION='.*'|DISTRIB_DESCRIPTION='OpenWRT R$(TZ=UTC-8 date +%Y-%m-%d) Compiled By TSingui'|g" package/emortal/default-settings/files/99-default-settings
 

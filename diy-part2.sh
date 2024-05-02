@@ -48,84 +48,29 @@ sed -i 's/OpenWrt/Tomato/g' package/base-files/files/bin/config_generate
 
 # Add software
 # git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
-# git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone --depth 1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone https://github.com/gdck/luci-app-cupsd.git package/luci-app-cupsd
+git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
 # svn co https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman package/luci-app-diskman
 # git clone --depth 1 https://github.com/lisaac/luci-app-diskman.git && mv luci-app-diskman/applications/luci-app-diskman package/luci-app-diskman && rm -rf luci-app-diskman
 # mkdir -p package/luci-app-diskman && wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/applications/luci-app-diskman/Makefile -O package/luci-app-diskman/Makefile
 # mkdir -p package/parted && wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
+git clone --depth 1 https://github.com/vernesong/OpenClash.git package/OpenClash
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
-# git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-# git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/luci-app-passwall/packages
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/luci-app-passwall/packages
 # git clone --depth 1 https://github.com/messense/aliyundrive-fuse.git && mv aliyundrive-fuse/openwrt/* ./package && rm -rf aliyundrive-fuse
 # git clone --depth 1 https://github.com/messense/aliyundrive-webdav.git && mv aliyundrive-webdav/openwrt/* ./package && rm -rf aliyundrive-webdav
-# git clone https://github.com/kenzok8/small-package package/small-package
-# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # luci-theme-argon for openwrt
-# git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # luci-theme-argon for lede
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 # git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # 删除重复包
-rm -rf feeds/kiddin9/luci-app-alist
-rm -rf feeds/kiddin9/alist
-rm -rf feeds/kiddin9/luci-app-aliyundrive-webdav
-rm -rf feeds/kiddin9/aliyundrive-webdav
-rm -rf feeds/kiddin9/luci-app-aria2
-rm -rf feeds/kiddin9/aria2
-rm -rf feeds/kiddin9/luci-app-transmission
-rm -rf feeds/kiddin9/luci-app-docker
-rm -rf feeds/kiddin9/luci-app-dockerman
-rm -rf feeds/kiddin9/dockerd
-rm -rf feeds/kiddin9/firewall
-rm -rf feeds/kiddin9/firewall4
-rm -rf feeds/kiddin9/luci-app-frpc
-rm -rf feeds/kiddin9/luci-app-frps
-rm -rf feeds/kiddin9/frp
-rm -rf feeds/kiddin9/luci-app-ksmbd
-rm -rf feeds/kiddin9/luci-app-samba4
-rm -rf feeds/kiddin9/luci-app-nlbwmon
-rm -rf feeds/kiddin9/luci-app-wrtbwmon
-rm -rf feeds/kiddin9/wrtbwmon
-rm -rf feeds/kiddin9/luci-app-rtbwmon
-rm -rf feeds/kiddin9/luci-app-upnp
-rm -rf feeds/kiddin9/luci-app-cifs
-rm -rf feeds/kiddin9/luci-app-bypass
-rm -rf feeds/kiddin9/luci-app-chinadns-ng
-rm -rf feeds/kiddin9/luci-app-clash
-rm -rf feeds/kiddin9/luci-app-mosdns
-rm -rf feeds/kiddin9/luci-app-passwall2
-rm -rf feeds/kiddin9/luci-app-shadowsocks-libev
-rm -rf feeds/kiddin9/luci-app-shadowsocks-rust
-rm -rf feeds/kiddin9/luci-app-ssr-libev-server
-rm -rf feeds/kiddin9/luci-app-ssr-mudb-server
-rm -rf feeds/kiddin9/luci-app-ssr-plus
-rm -rf feeds/kiddin9/luci-app-ssrserver-python
-rm -rf feeds/kiddin9/luci-app-v2ray-server
-rm -rf feeds/kiddin9/luci-app-v2raya
-rm -rf feeds/kiddin9/luci-app-tencentcloud-cos
-rm -rf feeds/kiddin9/luci-app-tencentddns
-rm -rf feeds/kiddin9/luci-app-ddns
-rm -rf feeds/kiddin9/ddns-scripts
-rm -rf feeds/kiddin9/luci-app-istorex
-rm -rf feeds/kiddin9/luci-app-quickstart
-rm -rf feeds/kiddin9/quickstart
-rm -rf feeds/kiddin9/luci-lib-taskd
-rm -rf feeds/kiddin9/luci-app-store
-rm -rf feeds/kiddin9/luci-app-ddnsto
-rm -rf feeds/kiddin9/ddnsto
-rm -rf feeds/kiddin9/luci-app-linkease
-rm -rf feeds/kiddin9/linkease
-rm -rf feeds/kiddin9/automount
-rm -rf feeds/kiddin9/luci-app-LingTiGameAcc
-rm -rf feeds/kiddin9/LingTiGameAcc
-rm -rf feeds/kiddin9/luci-app-speederv2
-rm -rf feeds/kiddin9/luci-app-speedtest-web
-rm -rf feeds/kiddin9/speedtest-web
-rm -rf feeds/kiddin9/speedtest-go
-
 # rm -rf feeds/luci/themes/luci-theme-argon
 # rm -rf feeds/luci/applications/luci-app-argon-config
 # rm -rf feeds/luci/applications/luci-app-diskman

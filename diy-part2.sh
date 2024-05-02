@@ -16,7 +16,7 @@
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-argon）
 # sed -i 's/luci-theme-bootstrap/luci-theme-edge/g' ./feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
+# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # Modify wifi default off to on
 sed -i "/wireless.\${name}.disabled/d" package/kernel/mac80211/files/lib/wifi/mac80211.sh || sed -i "/wireless.\${name}.disabled/d" package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
@@ -34,8 +34,8 @@ sed -i "/wireless.\${name}.disabled/d" package/kernel/mac80211/files/lib/wifi/ma
 # echo "DISTRIB_DESCRIPTION='OpenWRT R$(TZ=UTC-8 date +%Y-%m-%d) Compiled By TSingui'" >> package/base-files/files/etc/openwrt_release
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(TZ=UTC-8 date +%Y-%m-%d)'|g" package/base-files/files/etc/openwrt_release
 sed -i "s|DISTRIB_DESCRIPTION='.*'|DISTRIB_DESCRIPTION='OpenWRT R$(TZ=UTC-8 date +%Y-%m-%d) Compiled By TSingui'|g" package/base-files/files/etc/openwrt_release
-sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(TZ=UTC-8 date +%Y-%m-%d)'|g" package/emortal/default-settings/files/99-default-settings
-sed -i "s|DISTRIB_DESCRIPTION='.*'|DISTRIB_DESCRIPTION='OpenWRT R$(TZ=UTC-8 date +%Y-%m-%d) Compiled By TSingui'|g" package/emortal/default-settings/files/99-default-settings
+# sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(TZ=UTC-8 date +%Y-%m-%d)'|g" package/emortal/default-settings/files/99-default-settings
+# sed -i "s|DISTRIB_DESCRIPTION='.*'|DISTRIB_DESCRIPTION='OpenWRT R$(TZ=UTC-8 date +%Y-%m-%d) Compiled By TSingui'|g" package/emortal/default-settings/files/99-default-settings
 
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 10.0.0.1）
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate

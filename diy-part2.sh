@@ -70,6 +70,24 @@ sed -i 's/OpenWrt/Tomato/g' package/base-files/files/bin/config_generate
 
 # 删除重复包
 rm -rf feeds/kiddin9/luci-app-alist
+rm -rf feeds/kiddin9/luci-app-aria2
+rm -rf feeds/kiddin9/luci-app-transmission
+rm -rf feeds/kiddin9/luci-app-docker
+rm -rf feeds/kiddin9/luci-app-dockerman
+rm -rf feeds/kiddin9/dockerd
+rm -rf feeds/kiddin9/firewall
+rm -rf feeds/kiddin9/firewall4
+rm -rf feeds/kiddin9/luci-app-frpc
+rm -rf feeds/kiddin9/luci-app-frps
+rm -rf feeds/kiddin9/frp
+rm -rf feeds/kiddin9/luci-app-ksmbd
+rm -rf feeds/kiddin9/luci-app-samba4
+rm -rf feeds/kiddin9/luci-app-nlbwmon
+rm -rf feeds/kiddin9/luci-app-wrtbwmon
+rm -rf feeds/kiddin9/wrtbwmon
+rm -rf feeds/kiddin9/luci-app-rtbwmon
+rm -rf feeds/kiddin9/luci-app-upnp
+rm -rf feeds/kiddin9/luci-app-cifs
 rm -rf feeds/kiddin9/luci-app-bypass
 rm -rf feeds/kiddin9/luci-app-chinadns-ng
 rm -rf feeds/kiddin9/luci-app-clash
@@ -83,15 +101,15 @@ rm -rf feeds/kiddin9/luci-app-ssr-plus
 rm -rf feeds/kiddin9/luci-app-ssrserver-python
 rm -rf feeds/kiddin9/luci-app-v2ray-server
 rm -rf feeds/kiddin9/luci-app-v2raya
-rm -rf feeds/kiddin9/luci-app-dockerman
-rm -rf feeds/kiddin9/luci-app-ksmbd
-rm -rf feeds/kiddin9/luci-app-nlbwmon
-rm -rf feeds/kiddin9/luci-app-wrtbwmon
-rm -rf feeds/kiddin9/wrtbwmon
-rm -rf feeds/kiddin9/luci-app-rtbwmon
-rm -rf feeds/kiddin9/luci-app-upnp
 rm -rf feeds/kiddin9/luci-app-tencentcloud-cos
 rm -rf feeds/kiddin9/luci-app-tencentddns
+rm -rf feeds/kiddin9/luci-app-ddns
+rm -rf feeds/kiddin9/ddns-scripts
+rm -rf feeds/kiddin9/luci-app-istorex
+rm -rf feeds/kiddin9/luci-app-quickstart
+rm -rf feeds/kiddin9/quickstart
+rm -rf feeds/kiddin9/luci-lib-taskd
+rm -rf feeds/kiddin9/luci-app-store
 rm -rf feeds/kiddin9/luci-app-ddnsto
 rm -rf feeds/kiddin9/ddnsto
 rm -rf feeds/kiddin9/luci-app-linkease
@@ -99,6 +117,10 @@ rm -rf feeds/kiddin9/linkease
 rm -rf feeds/kiddin9/automount
 rm -rf feeds/kiddin9/luci-app-LingTiGameAcc
 rm -rf feeds/kiddin9/LingTiGameAcc
+rm -rf feeds/kiddin9/luci-app-speederv2
+rm -rf feeds/kiddin9/luci-app-speedtest-web
+rm -rf feeds/kiddin9/speedtest-web
+rm -rf feeds/kiddin9/speedtest-go
 
 # rm -rf feeds/luci/themes/luci-theme-argon
 # rm -rf feeds/luci/applications/luci-app-argon-config

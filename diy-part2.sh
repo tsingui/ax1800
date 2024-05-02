@@ -70,7 +70,11 @@ sed -i 's/OpenWrt/Tomato/g' package/base-files/files/bin/config_generate
 
 # 删除重复包
 rm -rf feeds/kiddin9/luci-app-alist
+rm -rf feeds/kiddin9/alist
+rm -rf feeds/kiddin9/luci-app-aliyundrive-webdav
+rm -rf feeds/kiddin9/aliyundrive-webdav
 rm -rf feeds/kiddin9/luci-app-aria2
+rm -rf feeds/kiddin9/aria2
 rm -rf feeds/kiddin9/luci-app-transmission
 rm -rf feeds/kiddin9/luci-app-docker
 rm -rf feeds/kiddin9/luci-app-dockerman

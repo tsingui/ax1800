@@ -115,7 +115,7 @@ jobs:
       run: |
         cd openwrt
         cat feeds.conf.default
-        # make defconfig > /dev/null 2>&1
+        make defconfig > /dev/null 2>&1
         SOURCE_REPO="$(echo $REPO_URL | awk -F '/' '{print $(NF)}')"
         echo "SOURCE_REPO=$SOURCE_REPO" >> $GITHUB_ENV
         DEVICE_TARGET=$(cat .config | grep CONFIG_TARGET_BOARD | awk -F '"' '{print $2}')

@@ -168,7 +168,8 @@ jobs:
         cd openwrt
         mkdir -p allpackages
         cp -a $OPENWRT_PATH/bin/* allpackages
-        # tar -zcvf allpackages.tar.gz allpackages
+        rm -rf allpackages/targets/qualcommax/ipq60xx/openwrt-*-kernel.bin
+        rm -rf allpackages/targets/qualcommax/ipq60xx/openwrt-*-rootfs.bin
         tar -zcvf $(date +"%Y-%m-%d")-allpackages.tar.gz allpackages
         ls -al && rm -rf allpackages
         mv -f $(date +"%Y-%m-%d")-allpackages.tar.gz $OPENWRT_PATH/bin/targets/*/*

@@ -84,7 +84,7 @@ jobs:
     - name: Load Custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        [ -e ipq6018-jdc-ax1800-pro.dts ] && cp -f -a ipq6018-jdc-ax1800-pro.dts openwrt/target/linux/qualcommax/files/arch/arm64/boot/dts/qcom
+        # [ -e ipq6018-jdc-ax1800-pro.dts ] && cp -f -a ipq6018-jdc-ax1800-pro.dts openwrt/target/linux/qualcommax/files/arch/arm64/boot/dts/qcom
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH

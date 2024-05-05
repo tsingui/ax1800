@@ -20,6 +20,7 @@
 
 # Modify wifi default off to on
 sed -i "/wireless.\${name}.disabled/d" package/kernel/mac80211/files/lib/wifi/mac80211.sh || sed -i "/wireless.\${name}.disabled/d" package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
+sed -i "s/ssid=OpenWrt/ssid=NPC/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh || sed -i "s/ssid=OpenWrt/ssid=NPC/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
 
 # Add autocore support for armvirt
 # sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile

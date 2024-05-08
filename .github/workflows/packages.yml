@@ -3,7 +3,7 @@ name: packages
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 0 * * *
+    - cron: 0 21 * * *
 
 env:
   REPO_URL: https://github.com/JiaY-shi/openwrt.git

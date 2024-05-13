@@ -59,8 +59,8 @@ git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns
 git clone --depth 1 https://github.com/vernesong/OpenClash.git package/OpenClash
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/luci-app-passwall/packages
+# git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+# git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/luci-app-passwall/packages
 # git clone --depth 1 https://github.com/messense/aliyundrive-fuse.git && mv aliyundrive-fuse/openwrt/* ./package && rm -rf aliyundrive-fuse
 # git clone --depth 1 https://github.com/messense/aliyundrive-webdav.git && mv aliyundrive-webdav/openwrt/* ./package && rm -rf aliyundrive-webdav
 

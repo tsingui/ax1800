@@ -44,6 +44,12 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 # Modify system hostname（FROM OpenWrt CHANGE TO Tomato）
 sed -i 's/OpenWrt/Tomato/g' package/base-files/files/bin/config_generate
 
+# Modify system timezone and timeserver（FROM UTC CHANGE TO CST-8）
+sed -i 's/UTC/CST-8/g' package/base-files/files/bin/config_generate
+sed -i '/1.openwrt.pool.ntp.org/d' package/base-files/files/bin/config_generate
+sed -i '/2.openwrt.pool.ntp.org/d' package/base-files/files/bin/config_generate
+sed -i '/3.openwrt.pool.ntp.org/d' package/base-files/files/bin/config_generate
+
 # Replace the default software source
 # sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba4/files/smb.conf.template
 

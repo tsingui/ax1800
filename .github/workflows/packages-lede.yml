@@ -1,4 +1,4 @@
-name: packages
+name: packages-lede
 
 on:
   workflow_dispatch:
